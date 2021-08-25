@@ -4,9 +4,16 @@ import Navbar from "./layout/Navbar";
 import Users from "./users/Users";
 import Contact from "./Pages/Contact";
 import { Route, BrowserRouter as Router } from "react-router-dom";
+import axios from 'axios';
 import "./App.css";
 
 class App extends Component{
+  async componentDidMount() {
+    const res = await axios.get("https://api.github.com/users");
+    console.log (res.data);
+  }
+
+
   render(){
     return (
       <Router>
