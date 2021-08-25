@@ -1,16 +1,16 @@
-import './App.css';
-import Contact from './Pages/Contact';
-import {Route, BrowserRouter as Router} from "react-router-dom";
+import React, { Component } from "react";
+import Navbar from "./layout/Navbar";
+import "./App.css";
 
-function App() {
-  return (
-    <Router>
-      <div className="App">
-        <h4>route</h4>
+class App extends Component{
+  render(){
+    return(
+      <div className='App'>
+
+        <Navbar />
+
       </div>
-      <Route path="/contact" component={Contact} />
-    </Router>
-  );
+    );
+  }
 }
-<Contact />
 export default App;
